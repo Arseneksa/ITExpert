@@ -110,8 +110,7 @@ venv/
 venvept/
 ENV/
 env.bak/
-venv.bak/
-ITexpert/settings.py
+settings.py
 
 # Spyder project settings
 .spyderproject
