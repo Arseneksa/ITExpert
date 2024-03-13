@@ -107,7 +107,7 @@ celerybeat.pid
 .venvept
 env/
 venv/
-venvept/
+static/
 ENV/
 env.bak/
 settings.py
