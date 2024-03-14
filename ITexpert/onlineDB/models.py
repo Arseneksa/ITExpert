@@ -68,6 +68,25 @@ class Block(models.Model):
             return  '%s'%(self.name)
         else:
             return None
+
+class Sampling(models.Model):
+    
+    size = models.IntegerField(null=True, blank=True)
+    sampling_method = models.CharField(max_length=255,null=False, blank=False)
+    # color = models.CharField(max_length=255,null=True, blank=True)
+    # total_area = models.FloatField(null=True, blank=True,verbose_name="Total area (km²)")
+    # longitude = models.FloatField(null=True, blank=True)
+    # latitude = models.FloatField(null=True, blank=True)
+    # site = models.ForeignKey(Site, on_delete=models.CASCADE, blank=True, null=True, default=None)  # type: ignore
+    
+    class Meta:
+        ordering = ['sampling_method']
+  
+    def __str__(self) -> str:
+        if self.sampling_method:
+            return  '%s'%(self.sampling_method)
+        else:
+            return None
 def days_between(d1, d2):
     # d1 = datetime.strptime(d1, "%Y-%m-%d")
     # d2 = datetime.strptime(d2, "%Y-%m-%d")
@@ -107,7 +126,7 @@ class Human_wildlife_conflict_data(models.Model):
         daily_average_rate_intrusion_with_damage = round((self.interaction_with_destruction/total_intrusion/nb_days)*100,2)
         daily_average_rate_intrusion_without_damage = round((self.interaction_without_destruction/total_intrusion/nb_days)*100,2)
         daily_average_rate_intrusion=round((daily_average_rate_intrusion_with_damage+daily_average_rate_intrusion_without_damage),2)
-        if Human_wildlife_conflict_dataSmart.objects.get(id_hwc_data=self):
+        if Human_wildlife_conflict_dataSmart.objects.filter(id_hwc_data=self):
             hwc_datasmart = Human_wildlife_conflict_dataSmart.objects.get(id_hwc_data=self)
             hwc_datasmart.site = self.site  
             hwc_datasmart.block = self.block
@@ -157,6 +176,3 @@ class Human_wildlife_conflict_dataSmart(models.Model):
         ordering = ['year']
         verbose_name_plural = "Human wildlife conflict data smart"
   
-    # def __str__(self) -> str:
-        
-    #     return self.id

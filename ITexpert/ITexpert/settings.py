@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'onlineDB',
     'import_export',
-    # General use templates & template tags (should appear first)
-    'adminlte3',
-     # Optional: Django admin theme (must be before django.contrib.admin)
-    'adminlte3_theme',
+    'rest_framework',
+    # # General use templates & template tags (should appear first)
+    # 'adminlte3',
+    #  # Optional: Django admin theme (must be before django.contrib.admin)
+    # 'adminlte3_theme',
 ]
 
 MIDDLEWARE = [
