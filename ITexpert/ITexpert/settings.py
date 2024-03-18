@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-sd4wz0v(ly5l!1zt=4h2f74lido(y1bio$4a2-bb*nccpd5n16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'onlineDB',
     'import_export',
     'rest_framework',
-    # # General use templates & template tags (should appear first)
-    # 'adminlte3',
-    #  # Optional: Django admin theme (must be before django.contrib.admin)
-    # 'adminlte3_theme',
+    # General use templates & template tags (should appear first)
+    'adminlte3',
+     # Optional: Django admin theme (must be before django.contrib.admin)
+    'adminlte3_theme',
 ]
 
 MIDDLEWARE = [
