@@ -58,7 +58,7 @@
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> {% endcomment %}
           <li class="dropdown"><a href=""><span>Data visualisation</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Chart </a></li>
+              <li><a href="https://itexpertapp.streamlit.app/">Chart </a></li>
               {% comment %} <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -68,21 +68,21 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul> {% endcomment %}
               </li>
-              <li><a href="#">Map</a></li>
+              <li><a href="https://itexpertapp.streamlit.app/">Map</a></li>
               {% comment %} <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li> {% endcomment %}
             </ul>
           </li>
           {% comment %} <li><a class="nav-link scrollto" href="#contact">Contact</a></li> {% endcomment %}
           {% if request.user.is_authenticated %}
-                
+
             <li><a class="getstarted scrollto" href="{% url 'admin:index' %}">My account</a></li>
-        
-                
+
+
           {% else %}
               <li><a class="getstarted scrollto" href="{% url 'admin:index' %}">Sign in</a></li>
           {% endif %}
-          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -90,7 +90,7 @@
     </div>
   </header><!-- End Header -->
 
-  
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex team align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -101,122 +101,58 @@
             in a structured and useful way for decision-making and easy information/data storage.</h2>
         </div>
       </div>
-      <div class="text-center">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
+
 
       <div class="row icon-boxes">
-        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
           <div class="member">
             <div class="member-img">
-              <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/dashboard.png' %}" class="img-fluid" alt="">
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="https://itexpertapp.streamlit.app/"><i class="bi bi-globe"></i></a>
               </div>
             </div>
             <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
+              <h4>Dasboard</h4>
+              <div class="text-center">
+                <a href="https://itexpertapp.streamlit.app/" class="btn-get-started scrollto">Get Started</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
           <div class="member">
             <div class="member-img">
-              <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/database.png' %}" class="img-fluid" alt="">
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="{% url 'admin:index' %}"><i class="bi bi-globe"></i></a>
+
               </div>
             </div>
             <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-          <div class="member">
-            <div class="member-img">
-              <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+              <h4>Database</h4>
+              <div class="text-center">
+                <a href="{% url 'admin:index' %}" class="btn-get-started scrollto">Get Started</a>
               </div>
-            </div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
             </div>
           </div>
         </div>
 
-        
+
+
 
       </div>
     </div>
   </section><!-- End Hero -->
 
-  
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>IT Expert</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
 
     <div class="container d-md-flex py-4">
 

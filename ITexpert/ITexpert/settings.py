@@ -82,21 +82,22 @@ WSGI_APPLICATION = 'ITexpert.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # Replace it with your DATABASES.
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
-#     )
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ITExpert97$default',
-        'USER': 'ITExpert97',
-        'PASSWORD': 'arseneIT',
-        'HOST': 'ITExpert97.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ITExpert97$oninedb',
+#         'USER': 'ITExpert97',
+#         'PASSWORD': 'arseneIT',
+#         'HOST': 'ITExpert97.mysql.pythonanywhere-services.com',
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
